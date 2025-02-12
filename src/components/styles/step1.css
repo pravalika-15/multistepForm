@@ -1,0 +1,643 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: #f0f4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    min-height: 28rem;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin: 15px 0;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Highlight active step */
+.sidebar li.active {
+    opacity: 1;
+}
+
+.step-number {
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Active step number styling */
+.step-number.active-step {
+    background-color: white;
+    color: #000;
+}
+
+/* Stack step text */
+.step-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.step-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+.step-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Form Container */
+.form-container {
+    padding: 3rem 5rem;
+    width: 30rem;
+}
+
+h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+    font-weight: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input.error {
+    border-color: red;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.go-back {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.next-step {
+    background: #002ead;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.next-step:hover {
+    background: #001a80;
+}
+
+.addon-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    /* padding: 15px; Keeps inner spacing */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    gap: 15px; /* Adds space between checkbox and text */
+}
+
+
+.addon-item-sel {
+    margin-top: 1rem;
+    /* padding-top: 1rem; */
+    /* border-top: 1px solid #ddd; */
+    display: flex;
+    justify-content: space-between;
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* margin-bottom: 15px; */
+    gap: 15px; /* Adds space between checkbox and text */
+  }
+  
+
+.addon-item input {
+    margin-left: 10px; /* Adds space between border and checkbox */
+    margin-right: 15px; /* Adds space between checkbox and text */
+    width: 20px;
+    height: 20px;
+    accent-color: #002ead; /* Makes checkbox blue */
+}
+
+.addon-details {
+    flex-grow: 1; /* Allows text to take up available space */
+    padding: 5px 10px; /* Adds space around text */
+}
+
+.addon-details h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F2B6C;
+}
+
+.addon-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.addon-price {
+    font-weight: bold;
+    color: #002ead;
+    margin-right: 10px; /* Adds space between price and border */
+}
+
+.addon-item.selected {
+    border-color: #002ead;
+    background: #f0f6ff;
+    /* padding: 18px;  */
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #002ead; /* Change checkbox color */
+}
+
+
+
+  
+  .summary-box {
+    background: #f7f9ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .plan-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .plan-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .plan-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .plan-name {
+    font-weight: bold;
+    color: #00286e;
+    padding-bottom:1rem;
+  }
+  
+  .change-plan {
+    font-size: 14px;
+    color: #666;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.change-plan:hover {
+    color: #666; /* Keep the same color */
+    background: none; /* Prevent any background change */
+    text-decoration: underline; /* Ensure it stays underlined */
+}
+
+  .addons-list {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+
+
+   
+  .addon-item {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0.5rem 0; */
+    /* font-size: 16px; */
+    color: #444;
+  }
+  
+  .total-summary {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .total-price {
+    color: #00286e;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .back-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .confirm-btn {
+    background: #00286e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .confirm-btn:hover {
+    background: #001a4d;
+  }
+  
+  /* Step 5 Thank You Page */
+  .thank-you-container {
+    text-align: center;
+    padding: 3rem 5rem;
+    width: 30rem;
+  }
+  
+  .thank-you-icon {
+    width: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .thank-you-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00286e;
+  }
+  
+  .thank-you-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 1rem;
+  }
+  
+
+  /* step 2 */
+
+  
+.plan-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .plan-card {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .plan-card.selected {
+    border-color: #4834d4;
+    background: #eef1ff;
+  }
+  
+  .plan-card h3 {
+    margin: 10px 0;
+  }
+  
+  .billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .billing-toggle span {
+    margin: 0 10px;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .billing-toggle span.active {
+    color: #4834d4;
+  }
+  
+  .switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #4834d4;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .go-back {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .next-step {
+    background: #4834d4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .next-step:hover {
+    background: #341f97;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    .plan-options {
+      flex-direction: column;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .go-back, .next-step {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0rem;
+        height: auto;
+        border-radius: 0px;
+        background-color: #f0f4ff;
+        padding-bottom: 5rem;
+    }
+
+    .sidebar {
+        background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px;
+    }
+
+
+
+    .sidebar ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    .sidebar li {
+        font-size: 14px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 80%;
+        max-width: 400px;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 15px;
+        margin-top: -50px;
+    }
+      /* Step 5 Thank You Page */
+  .thank-you-container {
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: -30px;
+  }
+
+    .step-text {
+        display: none;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .go-back,
+    .next-step {
+        width: 100%;
+        text-align: center;
+    }
+
+    .addon-item-sel {
+        /* flex-direction: column;
+        text-align: center; */
+    }
+
+    .addon-details {
+        margin-top: 10px;
+    }
+
+    .plan-options {
+        flex-direction: column;
+    }
+
+    .plan-card {
+        display: flex; /* Makes it a row layout */
+        flex-direction: row; /* Aligns icon and text side by side */
+        align-items: center; /* Centers items vertically */
+        gap: 15px; /* Adds space between icon and text */
+        padding: 15px;
+        text-align: left; /* Aligns text to the left */
+    }
+
+    .plan-icon {
+        width: 45px; /* Adjust size if necessary */
+        height: 45px;
+    }
+
+    .plan-info h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .plan-info p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .plan-info .free-months {
+        font-size: 12px;
+        color: #4834d4;
+    }
+}

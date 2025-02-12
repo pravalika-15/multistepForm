@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url('../../assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding:1rem
+  }
+  
+  .sidebar {
+    width: 200px;
+    /* height: 100vh; */
+    background-image: url("../../assets/images/bg-sidebar-mobile.svg"); /* Update with your image path */
+    background-size: cover;
+    /* background-position: center; */
+    /* background-size: contain;  Ensures the full image fits */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: center; /* Centers the image */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    display: flex;  /* Make step number and text side by side */
+    align-items: center; /* Align text and number in one line */
+    gap: 10px; /* Space between number and text */
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+
+  
+  .sidebar .active {
+    color: #ffeb3b;
+  }
+  
+  .form-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 30rem;
+  }
+  
+  h2 {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #666;
+    font-weight: normal;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  input.error {
+    border-color: red;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  
+  button {
+    background: #002ead;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  button:hover {
+    background: #001a80;
+  }
+  
+
+/* Step Number Styling */
+.step-number {
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  /* Active Step */
+  .sidebar li.active .step-number {
+    background-color: white;
+    color: #000;
+  }
+
+
+  /* Stack Step Label and Title */
+.step-text {
+    display: flex;
+    flex-direction: column; /* Stack Step 1 above YOUR INFO */
+    line-height: 1.2;
+  }
+  
+  .step-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  .step-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Align towards the top */
+        /* padding-top: 3rem; */
+        padding:0rem;
+        height: auto; /* Prevent overflow issues */
+        border-radius: 0px;
+        background-color: #f0f4ff;
+      }
+  
+    .sidebar {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0px;
+    }
+  
+    .sidebar ul {
+      display: flex;
+      gap: 15px;
+    }
+  
+    .sidebar li {
+      font-size: 14px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .step-number {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  
+    .form-container {
+        position: relative;
+        top: -50px; /* Move the form upwards */
+        width: 65%;
+        max-width: 400px;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+    .step-text {
+        display: none; /* Hide step labels and titles */
+      }
+  }
