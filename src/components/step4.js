@@ -36,7 +36,7 @@ const Step4 = ({ plan, addOns, isYearly, onChangePlan, onConfirm, prevStep, acti
           <div className="plan-summary">
             <div className="plan-info">
               <span className="plan-name">{plan.name} ({isYearly ? "Yearly" : "Monthly"})</span>
-              <a href="#" className="change-plan" onClick={(e) => { e.preventDefault(); onChangePlan(); }}>Change</a>
+              <a role="button" className="change-plan" onClick={(e) => { e.preventDefault(); onChangePlan(); }}>Change</a>
             </div>
             <span className="plan-price">${plan.price[isYearly ? "yearly" : "monthly"]}/{isYearly ? "yr" : "mo"}</span>
           </div>
