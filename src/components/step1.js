@@ -101,7 +101,18 @@ const Step1 = ({ activeStep, nextStep, formData, setFormData }) => {
               Next Step
             </button>
           </div>
+
+          {/* <!-- Mobile Navigation Buttons --> */}
+<div class="mobile-nav">
+    {/* <button class="back-btn">Go Back</button>
+     */}
+
+     <div></div>
+    <button class="confirm-btn">Next Step</button>
+</div>
         </form>
+
+
       </div>
     </div>
   );

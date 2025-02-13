@@ -63,6 +63,11 @@ const Step4 = ({ plan, addOns, isYearly, onChangePlan, onConfirm, prevStep, acti
           <button className="back-btn" onClick={prevStep}>Go Back</button>
           <button className="confirm-btn" onClick={onConfirm}>Confirm</button>
         </div>
+
+        <div class="mobile-nav2">
+          <button class="back-btn" onClick={prevStep}>Go Back</button>
+          <button class="confirm-btn" onClick={onConfirm}>Confirm</button>
+        </div>
       </div>
     </div>
   );

@@ -209,6 +209,8 @@ input.error {
     transition: 0.3s;
     /* margin-bottom: 15px; */
     gap: 15px; /* Adds space between checkbox and text */
+    color: #7b7777;
+    font-weight: bold;
   }
   
 
@@ -240,7 +242,7 @@ input.error {
 
 .addon-price {
     font-weight: bold;
-    color: #002ead;
+    color: #71747c;
     margin-right: 10px; /* Adds space between price and border */
 }
 
@@ -524,7 +526,15 @@ input[type="checkbox"] {
   }
   
 
-
+/* Mobile navigation buttons */
+.mobile-nav {
+  display: none;
+  
+}
+.mobile-nav2 {
+  display: none;
+  
+}
 
 
 /* Responsive Design */
@@ -542,14 +552,52 @@ input[type="checkbox"] {
         height: 100vh;
         width: 100vh;
     }
+    .button-container, .button-group {
+      display: none;
+     
+    }
 
+    
+
+    .mobile-nav2 {
+      display: flex;
+      position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  /* margin-left:-10px; */
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+    .mobile-nav {
+      display: flex;
+      position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  margin-left:-10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
     .sidebar {
         background-image: url("../../assets/images/bg-sidebar-mobile.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        height: 200px;
+        height: 180px;
         background-size: cover;
         display: flex;
         flex-direction: row;

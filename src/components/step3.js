@@ -67,6 +67,11 @@ const Step3 = ({ nextStep, prevStep, selectedAddOns, setSelectedAddOns, isYearly
           <button className="back-btn" onClick={prevStep}>Go Back</button>
           <button className="confirm-btn" onClick={nextStep}>Next Step</button>
         </div>
+
+        <div class="mobile-nav2">
+          <button class="back-btn" onClick={prevStep}>Go Back</button>
+          <button class="confirm-btn" onClick={nextStep} >Next Step</button>
+        </div>
       </div>
     </div>
   );
