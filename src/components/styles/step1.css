@@ -481,6 +481,13 @@ input[type="checkbox"] {
     justify-content: space-between;
     margin-top: 20px;
   }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
   
   .go-back {
     background: none;
@@ -508,11 +515,7 @@ input[type="checkbox"] {
     .plan-options {
       flex-direction: column;
     }
-  
-    .button-container {
-      flex-direction: column;
-      gap: 10px;
-    }
+
   
     .go-back, .next-step {
       width: 100%;
@@ -526,15 +529,18 @@ input[type="checkbox"] {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .container {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         padding: 0rem;
-        height: auto;
+        /* height: auto; */
         border-radius: 0px;
         background-color: #f0f4ff;
-        padding-bottom: 5rem;
+        /* padding-bottom: 5rem; */
+        height: 100vh;
+        width: 100vh;
     }
 
     .sidebar {
@@ -588,20 +594,13 @@ input[type="checkbox"] {
         display: none;
     }
 
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
+   
+    
 
     .go-back,
     .next-step {
         width: 100%;
         text-align: center;
-    }
-
-    .addon-item-sel {
-        /* flex-direction: column;
-        text-align: center; */
     }
 
     .addon-details {

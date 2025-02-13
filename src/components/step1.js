@@ -96,6 +96,7 @@ const Step1 = ({ activeStep, nextStep, formData, setFormData }) => {
           {errors.phone && <span className="error-text">This field is required</span>}
 
           <div className="button-container">
+          <div></div>
             <button type="submit" className="next-step">
               Next Step
             </button>
