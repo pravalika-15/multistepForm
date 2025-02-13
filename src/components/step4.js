@@ -52,12 +52,12 @@ const Step4 = ({ plan, addOns, isYearly, onChangePlan, onConfirm, prevStep, acti
           </div>
 
           {/* Total */}
-          <div className="total-summary">
+          
+        </div>
+        <div className="total-summary">
             <span>Total ({isYearly ? "Yearly" : "Monthly"})</span>
             <span className="total-price">${total}/{isYearly ? "yr" : "mo"}</span>
           </div>
-        </div>
-
         {/* Buttons */}
         <div className="button-group">
           <button className="back-btn" onClick={prevStep}>Go Back</button>

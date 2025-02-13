@@ -264,7 +264,7 @@ input[type="checkbox"] {
   .summary-box {
     background: #f7f9ff;
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 13px;
   }
   
   .plan-summary {
@@ -325,7 +325,7 @@ input[type="checkbox"] {
   .total-summary {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
     display: flex;
     justify-content: space-between;
     font-size: 18px;
