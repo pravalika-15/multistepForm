@@ -550,7 +550,8 @@ input[type="checkbox"] {
         background-color: #f0f4ff;
         /* padding-bottom: 5rem; */
         height: 100vh;
-        width: 70vh;
+        width: 100%;
+        max-width: 100rem;
     }
     .button-container, .button-group {
       display: none;
